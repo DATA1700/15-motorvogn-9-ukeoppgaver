@@ -98,11 +98,11 @@ public class MotorvognController {
 
     private boolean validerMotorvognOK(Motorvogn motorvogn){
         String regexPersonnr = "[0-9]{11}";
-        String regexNavn = "[a-zA-ZæøåÆØÅ.\\-]{2,20}";
-        String regexAdresse = "[0-9a-zA-ZæøåÆØÅ.\\-]{2,30}";
+        String regexNavn = "[a-zA-ZæøåÆØÅ. \\-]{2,20}";
+        String regexAdresse = "[0-9a-zA-ZæøåÆØÅ. \\-]{2,30}";
         String regexKjennetegn = "[A-Z][A-Z][0-9]{5}";
-        String regexMerke = "[a-zA-ZæøåÆØÅ.\\-]{2,10}";
-        String regexType = "[0-9a-zA-ZæøåÆØÅ.\\-]{2,10}";
+        String regexMerke = "[a-zA-ZæøåÆØÅ. \\-]{2,10}";
+        String regexType = "[0-9a-zA-ZæøåÆØÅ. \\-]{2,10}";
         boolean personnrOK = motorvogn.getPersonnr().matches(regexPersonnr);
         boolean navnOK = motorvogn.getNavn().matches(regexNavn);
         boolean adresseOK = motorvogn.getAdresse().matches(regexAdresse);
